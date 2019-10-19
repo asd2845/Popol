@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 
 public class Calculation {
 
-	private JFrame frame;
+	private JFrame frmBy;
 	private JTextField textField;
 	double num1;
 	double num2;
@@ -28,7 +28,7 @@ public class Calculation {
 			public void run() {
 				try {
 					Calculation window = new Calculation();
-					window.frame.setVisible(true);
+					window.frmBy.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -47,16 +47,17 @@ public class Calculation {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 274, 387);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
+		frmBy = new JFrame();
+		frmBy.setTitle("\uACC4\uC0B0\uAE30 by.\uAE40\uBCD1\uCC2C");
+		frmBy.setBounds(100, 100, 274, 387);
+		frmBy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmBy.getContentPane().setLayout(null);
 		
 		textField = new JTextField();
 		textField.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		textField.setHorizontalAlignment(SwingConstants.RIGHT);
 		textField.setBounds(12, 10, 236, 35);
-		frame.getContentPane().add(textField);
+		frmBy.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		JButton btn7 = new JButton("7");
@@ -69,7 +70,7 @@ public class Calculation {
 		});
 		btn7.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn7.setBounds(12, 114, 50, 50);
-		frame.getContentPane().add(btn7);
+		frmBy.getContentPane().add(btn7);
 		
 		
 		
@@ -83,7 +84,7 @@ public class Calculation {
 		});
 		btn8.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn8.setBounds(74, 114, 50, 50);
-		frame.getContentPane().add(btn8);
+		frmBy.getContentPane().add(btn8);
 		
 		
 		
@@ -97,7 +98,7 @@ public class Calculation {
 		});
 		btn9.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn9.setBounds(136, 114, 50, 50);
-		frame.getContentPane().add(btn9);
+		frmBy.getContentPane().add(btn9);
 		
 		
 		
@@ -112,7 +113,7 @@ public class Calculation {
 		});
 		btnMin.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btnMin.setBounds(198, 114, 50, 50);
-		frame.getContentPane().add(btnMin);
+		frmBy.getContentPane().add(btnMin);
 		
 		JButton btnBack = new JButton("\u2190");
 		btnBack.addActionListener(new ActionListener() {
@@ -130,7 +131,7 @@ public class Calculation {
 		});
 		btnBack.setFont(new Font("±¼¸²", Font.BOLD, 14));
 		btnBack.setBounds(12, 55, 50, 50);
-		frame.getContentPane().add(btnBack);
+		frmBy.getContentPane().add(btnBack);
 		
 		JButton btnClear = new JButton("C");
 		btnClear.addActionListener(new ActionListener() {
@@ -141,7 +142,7 @@ public class Calculation {
 		});
 		btnClear.setFont(new Font("±¼¸²", Font.BOLD, 14));
 		btnClear.setBounds(74, 55, 50, 50);
-		frame.getContentPane().add(btnClear);
+		frmBy.getContentPane().add(btnClear);
 		
 		JButton btnNan = new JButton("%");
 		btnNan.addActionListener(new ActionListener() {
@@ -153,7 +154,7 @@ public class Calculation {
 		});
 		btnNan.setFont(new Font("±¼¸²", Font.BOLD, 14));
 		btnNan.setBounds(136, 55, 50, 50);
-		frame.getContentPane().add(btnNan);
+		frmBy.getContentPane().add(btnNan);
 		
 		JButton btnPlu = new JButton("+");
 		btnPlu.addActionListener(new ActionListener() {
@@ -165,7 +166,7 @@ public class Calculation {
 		});
 		btnPlu.setFont(new Font("±¼¸²", Font.BOLD, 14));
 		btnPlu.setBounds(198, 55, 50, 50);
-		frame.getContentPane().add(btnPlu);
+		frmBy.getContentPane().add(btnPlu);
 		
 		JButton btnGop = new JButton("*");
 		btnGop.addActionListener(new ActionListener() {
@@ -177,7 +178,7 @@ public class Calculation {
 		});
 		btnGop.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btnGop.setBounds(198, 174, 50, 50);
-		frame.getContentPane().add(btnGop);
+		frmBy.getContentPane().add(btnGop);
 		
 		JButton btnNanu = new JButton("/");
 		btnNanu.addActionListener(new ActionListener() {
@@ -189,7 +190,7 @@ public class Calculation {
 		});
 		btnNanu.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btnNanu.setBounds(198, 234, 50, 50);
-		frame.getContentPane().add(btnNanu);
+		frmBy.getContentPane().add(btnNanu);
 		
 		JButton btnNeu = new JButton("=");
 		btnNeu.addActionListener(new ActionListener() {
@@ -230,7 +231,7 @@ public class Calculation {
 		});
 		btnNeu.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btnNeu.setBounds(198, 294, 50, 50);
-		frame.getContentPane().add(btnNeu);
+		frmBy.getContentPane().add(btnNeu);
 		
 		JButton btnPM = new JButton("\u00B1");
 		btnPM.addActionListener(new ActionListener() {
@@ -243,7 +244,7 @@ public class Calculation {
 		});
 		btnPM.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btnPM.setBounds(136, 294, 50, 50);
-		frame.getContentPane().add(btnPM);
+		frmBy.getContentPane().add(btnPM);
 		
 		JButton btnPot = new JButton(".");
 		btnPot.addActionListener(new ActionListener() {
@@ -257,7 +258,7 @@ public class Calculation {
 		});
 		btnPot.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btnPot.setBounds(74, 294, 50, 50);
-		frame.getContentPane().add(btnPot);
+		frmBy.getContentPane().add(btnPot);
 		
 		
 		
@@ -271,7 +272,7 @@ public class Calculation {
 		});
 		btn4.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn4.setBounds(12, 174, 50, 50);
-		frame.getContentPane().add(btn4);
+		frmBy.getContentPane().add(btn4);
 		
 		
 		
@@ -285,7 +286,7 @@ public class Calculation {
 		});
 		btn5.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn5.setBounds(74, 174, 50, 50);
-		frame.getContentPane().add(btn5);
+		frmBy.getContentPane().add(btn5);
 		
 		
 		
@@ -299,7 +300,7 @@ public class Calculation {
 		});
 		btn6.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn6.setBounds(136, 174, 50, 50);
-		frame.getContentPane().add(btn6);
+		frmBy.getContentPane().add(btn6);
 		
 		
 		
@@ -313,7 +314,7 @@ public class Calculation {
 		});
 		btn3.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn3.setBounds(136, 234, 50, 50);
-		frame.getContentPane().add(btn3);
+		frmBy.getContentPane().add(btn3);
 		
 		
 		
@@ -327,7 +328,7 @@ public class Calculation {
 		});
 		btn2.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn2.setBounds(74, 234, 50, 50);
-		frame.getContentPane().add(btn2);
+		frmBy.getContentPane().add(btn2);
 		
 		
 		
@@ -341,7 +342,7 @@ public class Calculation {
 		});
 		btn1.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn1.setBounds(12, 234, 50, 50);
-		frame.getContentPane().add(btn1);
+		frmBy.getContentPane().add(btn1);
 		
 		
 		
@@ -355,7 +356,7 @@ public class Calculation {
 		});
 		btn0.setFont(new Font("±¼¸²", Font.BOLD, 18));
 		btn0.setBounds(12, 294, 50, 50);
-		frame.getContentPane().add(btn0);
+		frmBy.getContentPane().add(btn0);
 		
 		
 		
